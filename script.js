@@ -110,3 +110,10 @@ function animation() {
     })
 }
 
+function imageBan(resultat) {
+    let ban = document.getElementById("banniere");
+
+    for (i = 0; i < resultat.length; i++) {
+        ban.innerHTML += '<img class="tailleImage" src= "' + resultat[i].image + '">'
+    }
+}

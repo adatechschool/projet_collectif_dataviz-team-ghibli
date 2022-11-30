@@ -1,6 +1,3 @@
-
-
-
 const result = fetch("https://ghibliapi.herokuapp.com/films")
     .then(data => data.json())
     .then(res => scrollTitles(res))
@@ -23,3 +20,7 @@ const resu = fetch("https://ghibliapi.herokuapp.com/films")
 const resul = fetch("https://ghibliapi.herokuapp.com/films")
     .then(data => data.json())
     .then(resul => b1(resul))
+
+    const resulta = fetch("https://ghibliapi.herokuapp.com/films")
+    .then(data => data.json())
+    .then(resulta => imageBan(resulta))
