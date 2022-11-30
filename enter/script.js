@@ -1,22 +1,40 @@
 
 //----- DOM Elements:
 
-let list = document.getElementById('filmslist');
+// let list = document.getElementById('filmslist');
+
+// Ajout getelements pour menu Johan
+
+let list = document.getElementById('sous3');
+let list2 = document.getElementById('sous4');
+
+
+// Fin Ajout getelements pour menu Johan
 
 let datesTimeline = document.getElementsByClassName('release_dates_timeline');
 let titlesTimeline = document.getElementsByClassName('films_title_timeline');
 
 function scrollTitles(result) {
 
-    for (i = 0; i < result.length; i++) {
-        list.innerHTML += `<option value="films_page/pages_index.html?film=${result[i].title}" class="title"> ${result[i].title}</option>`;
+    // Modification par Johan Menu
+    
+    // for (i = 0; i < result.length; i++) {
+    //     list.innerHTML += `<option value="films_page/pages_index.html?film=${result[i].title}" class="title"> ${result[i].title}</option>`;
 
+    // }
+
+    // list.addEventListener('change', function () {
+    //     let valeur = list.options[list.selectedIndex].value;
+    //     window.location.href = valeur;
+    // })
+
+    for (i = 0; i < result.length / 2 ; i++) {
+        list.innerHTML += `<li><a href="/films_page/pages_index.html?film=${result[i].title}">${result[i].title}</a></li>`
     }
 
-    list.addEventListener('change', function () {
-        let valeur = list.options[list.selectedIndex].value;
-        window.location.href = valeur;
-    })
+    for (i = result.length / 2 ; i < result.length ; i++) {
+        list2.innerHTML += `<li><a href="/films_page/pages_index.html?film=${result[i].title}">${result[i].title}</a></li>`
+    }
 
 }
 
